@@ -1,5 +1,5 @@
 # Bierdopje-Move
-Allows you to move and positioning the blocks on the Bierdopje homepage.
+Allows you to move and position the blocks on the Bierdopje homepage.
 
 
 <strong>NOTICE:</strong><BR/>
