@@ -6,9 +6,11 @@
 // @match        http://*.bierdopje.com/
 // @run-at       document-start
 // @grant        unsafeWindow
+// @grant        GM_getValue
+// @grant        GM_setValue
 // @require      http://code.jquery.com/jquery-1.10.2.js
 // @require      http://code.jquery.com/ui/1.11.4/jquery-ui.js
-// @require      http://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js
+// @author       Tom
 // @copyright    2016+, Tom
 // ==/UserScript==
 /* jshint -W097 */
@@ -71,21 +73,21 @@ $(function() {
                     cooked2[index] = $(domEle).sortable('toArray', {key: 'j', attribute: 'id'});
                 }
             );
-            $.cookie('blockOrder1', cooked1.join('|'));
-            $.cookie('blockOrder2', cooked2.join('|'));
+            GM_setValue("blockOrder1", cooked1.join('|'));
+            GM_setValue("blockOrder2", cooked2.join('|'));
         }
     });
     
     function restoreOrder() {
-        var cookie1 = $.cookie('blockOrder1');
-        var cookie2 = $.cookie('blockOrder2');
-        if (!cookie1 || !cookie2) return;
+        var order1 = GM_getValue("blockOrder1");
+        var order2 = GM_getValue("blockOrder2");;
+        if (!order1 || !order2) return;
         
-        console.log("cookie1: " + cookie1);
-        console.log("cookie2: " + cookie2);
+        console.log("order1: " + order1);
+        console.log("order2: " + order2);
         
-        var SavedID1 = cookie1.split('|');
-        var SavedID2 = cookie2.split('|');
+        var SavedID1 = order1.split('|');
+        var SavedID2 = order2.split('|');
         
         for (var u=0, ul=SavedID1.length; u < ul; u++) {
             SavedID1[u] = SavedID1[u].split(',');
@@ -123,16 +125,5 @@ $(function() {
                 
             }
         }
-    }
-    
-    function getOrder() {
-        //var cookies = document.cookie;
-        return $.cookie("blockOrder");
-    }
-    
-    function setOrder(order) {
-        // document.cookie="blockOrder=" + order;
-        $.cookie('blockOrder', order);
-        console.log("NEW ORDER: " + order);
     }
 });
