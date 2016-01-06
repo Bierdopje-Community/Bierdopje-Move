@@ -5,6 +5,7 @@
 // @description  Allows you to move and positioning the blocks on the homepage.
 // @match        http://*.bierdopje.com/
 // @run-at       document-start
+// @grant        unsafeWindow
 // @require      http://code.jquery.com/jquery-1.10.2.js
 // @require      http://code.jquery.com/ui/1.11.4/jquery-ui.js
 // @require      http://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js
