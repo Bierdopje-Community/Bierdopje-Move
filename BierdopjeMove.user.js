@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Bierdopje Move
 // @namespace    http://www.bierdopje.com
-// @version      0.1
+// @version      0.2
 // @description  Allows you to move and positioning the blocks on the homepage.
 // @match        http://*.bierdopje.com/
 // @run-at       document-start
