@@ -6,7 +6,7 @@ Enjoy.
 Version <strong>0.3.1</strong>
 
 Animated screenshot:<BR/>
-![Version 0.3.1](https://raw.githubusercontent.com/TomONeill/Bierdopje-Move/master/Screenshots/0.3.gif "Version 0.3.1")
+![Version 0.3.1](https://github.com/Bierdopje-Community/Bierdopje-Move/raw/master/Screenshots/0.3.1.gif "Version 0.3.1")
 
 <BR/><BR/>
 Changelog:<BR/>
