@@ -1,0 +1,5 @@
+Version 0.2:
+Changed cookies with extension data saving.
+
+Version 0.1:
+First release

@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Bierdopje Move
 // @namespace    http://www.bierdopje.com
-// @version      0.3
+// @version      0.2
 // @description  Allows you to move and position the blocks on the homepage.
 // @match        http://*.bierdopje.com/
 // @run-at       document-start
@@ -16,10 +16,15 @@
 /* jshint -W097 */
 'use strict';
 
+//-------------------------------//
+//   NOTICE:                     //
+// The code is not what I wanted //
+// it to be. It's rather ugly,   //
+// but it gets the job done.     //
+// Enjoy.                        //
+//-------------------------------//
+
 $(function() {
-    // Change cursor on block headers
-    $(".header").css('cursor', 'pointer');
-    
     // Fix position of the billboard.
     var billboardStyle = {
         position: "relative",
@@ -45,75 +50,11 @@ $(function() {
         $(this).attr('id', "j_" + (j+1));
     });
     
-    // Load the blocks collapse state.
-    var collapsedBlocks = [];
-    collapsedBlocks = getCollapsedBlocks();
-    restoreCollapsedBlocks(collapsedBlocks);
-    
     // Load the blocks in the right order.
     restoreOrder();
     
     col1.addClass("connectedSortable");
     col2.addClass("connectedSortable");
-    
-    // Collapsing feature
-    $('.sortable1 > .block > .header').click(function() {
-        collapseFeature($(this));
-        
-        return false;
-    });
-    $('.sortable2 > .block > .header').click(function() {
-        collapseFeature($(this));
-        
-        return false;
-    });
-    
-    function collapseFeature(me) {
-        var body = me.next();
-        var blockId = me.parent().attr("id");
-        
-        body.slideToggle("slow", function() {
-            if (body.is(":hidden")) {
-                collapsedBlocks.push(blockId);
-                console.log("hiddenarray: " + collapsedBlocks);
-            } else {
-                collapsedBlocks = deleteFromArrayByValue(collapsedBlocks, blockId);
-                console.log("visiblearray: " + collapsedBlocks);
-            }
-            GM_setValue("collapsedBlocks", collapsedBlocks);
-        });  
-    };
-    
-    function getCollapsedBlocks() {
-        // Check for data in storage.
-        if (GM_getValue("collapsedBlocks")) {
-            return GM_getValue("collapsedBlocks");
-            console.log("Found data in collapsedBlocks GM: " + collapsedBlocks);
-        } else {
-            return null;
-        }
-    };
-    
-    function restoreCollapsedBlocks(cBlocks) {
-        var i;
-        for (i = 0; i < cBlocks.length; i++) {
-            var target = document.getElementById(cBlocks[i]);
-            $(target).children(".body").hide();
-        }
-    };
-    
-    function deleteFromArrayByValue(array, value) {
-        // todo?:
-        // https://api.jquery.com/jQuery.inArray/
-        var i = array.length;
-        while (i--) {
-            if (array[i] === value) {
-                array.splice(i, 1);
-            }
-        }
-        
-        return array;
-    };
     
     // Actual sorting.
     $(".sortable1, .sortable2").sortable({
@@ -139,7 +80,7 @@ $(function() {
     
     function restoreOrder() {
         var order1 = GM_getValue("blockOrder1");
-        var order2 = GM_getValue("blockOrder2");
+        var order2 = GM_getValue("blockOrder2");;
         if (!order1 || !order2) return;
         
         console.log("order1: " + order1);
