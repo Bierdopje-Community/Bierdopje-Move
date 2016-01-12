@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Bierdopje Move
 // @namespace    http://www.bierdopje.com
-// @version      0.3
+// @version      0.3.1
 // @description  Allows you to move and position the blocks on the homepage.
 // @match        http://*.bierdopje.com/
 // @run-at       document-start
@@ -90,7 +90,7 @@ $(function() {
             return GM_getValue("collapsedBlocks");
             console.log("Found data in collapsedBlocks GM: " + collapsedBlocks);
         } else {
-            return null;
+            return [];
         }
     };
     
