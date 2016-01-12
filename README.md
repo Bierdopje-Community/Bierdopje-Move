@@ -8,6 +8,10 @@ It's rather ugly, but it gets the job done.<BR/>
 Enjoy.
 <BR/><BR/>
 Version <strong>0.3</strong>
+
+Animated screenshot:<BR/>
+![Version 0.3](https://raw.githubusercontent.com/TomONeill/Bierdopje-Move/master/Screenshots/0.3.gif "Version 0.3")
+
 <BR/><BR/>
 Changelog:<BR/>
 Version 0.3:<BR/>
