@@ -1,0 +1,2 @@
+This version is unusable due to a bug.
+Please install Version 0.3.1 instead, which includes the fix.
