@@ -1,8 +1,10 @@
-Version 0.3:
+Bierdopje Move Changelog
+
+Version 0.3 (12 January 2016)
 Added block collapsing.
 
-Version 0.2:
+Version 0.2 (6 January 2016)
 Changed cookies with extension data saving.
 
-Version 0.1:
+Version 0.1 (6 January 2016)
 First release
