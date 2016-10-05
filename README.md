@@ -5,6 +5,8 @@ Enjoy.
 <BR/><BR/>
 Version <strong>0.3.1</strong>
 
+<A HREF="https://github.com/Bierdopje-Community/Bierdopje-Move/raw/master/BierdopjeMove.user.js">INSTALL</A>
+
 Animated screenshot:<BR/>
 ![Version 0.3.1](https://github.com/Bierdopje-Community/Bierdopje-Move/raw/master/Screenshots/0.3.1.gif "Version 0.3.1")
 
