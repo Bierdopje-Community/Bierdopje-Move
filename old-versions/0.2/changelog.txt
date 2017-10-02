@@ -1,7 +1,0 @@
-Bierdopje Move Changelog
-
-Version 0.2 (6 January 2016)
-Changed cookies with extension data saving.
-
-Version 0.1 (6 January 2016)
-First release

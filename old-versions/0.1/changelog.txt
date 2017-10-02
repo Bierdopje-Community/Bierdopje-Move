@@ -1,4 +1,0 @@
-Bierdopje Move Changelog
-
-Version 0.1 (6 January 2016)
-First release

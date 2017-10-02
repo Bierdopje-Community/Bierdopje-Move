@@ -1,10 +1,11 @@
 // ==UserScript==
 // @name         Bierdopje Move
 // @namespace    http://www.bierdopje.com
-// @version      1.0
+// @version      0.3.1
 // @description  Allows you to move and position the blocks on the homepage.
 // @updateURL 	 https://github.com/Bierdopje-Community/Bierdopje-Move/raw/master/BierdopjeMove.user.js
 // @match        http://*.bierdopje.com/
+// @run-at       document-start
 // @grant        unsafeWindow
 // @grant        GM_getValue
 // @grant        GM_setValue
